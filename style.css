@@ -1,0 +1,31 @@
+#game div {
+  border: 1px solid black;
+  width: 15%;
+  height: 200px;
+  margin: 10px;
+  display: inline-block;
+}
+img {
+  width: 100%;
+  height: inherit;
+}
+h4 {
+  margin-block-start: 5px;
+  margin-block-end: 5px;
+}
+#game-control div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px 0px 10px 10px;
+  min-width: 20%;
+  max-width: 20%;
+}
+#number-of-cards-container {
+  border: 1px solid black;
+}
+body > div {
+  margin-left: 10px;
+}
+#number-of-cards {
+  width: 90%;
+}
