@@ -27,8 +27,8 @@ for (let imgNo = 0; imgNo < noImg; imgNo++) {
 }
 
 function selectRandomElementsFromArray(numElements, sourceArray) {
-  let shuffledArray = shuffle(sourceArray)
-  return shuffledArray.slice(0, numElements)
+  let shuffledArray = shuffle(sourceArray).slice(0, numElements)
+  return shuffledArray.concat(shuffledArray)
 }
 
 function shuffle(array) {
