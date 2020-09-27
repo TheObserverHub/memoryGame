@@ -26,29 +26,9 @@ for (let imgNo = 0; imgNo < noImg; imgNo++) {
 
 }
 
-
-///To do 
-///create selectRandomElementsFromArray using the shuffle algorithm
-///
-function selectRandomElementsFromArray(numElements, sourceArray){
-  const result = []
-  let sourceLength = sourceArray.length
-  if (numElements === 0) {
-      //default
-    numElements = 1
-  }
-  if (numElements >= sourceLength) {
-    numElements = sourceLength
-  }
-  for (let img = 0; img < numElements; img++) {
-    let index = Math.floor(Math.random() * sourceLength);
-    if (result.includes(sourceArray[index])) {
-      img--
-      continue
-    }
-    result[img] = sourceArray[index]
-  }
-  return result.concat(result)
+function selectRandomElementsFromArray(numElements, sourceArray) {
+  let shuffledArray = shuffle(sourceArray)
+  return shuffledArray.slice(0, numElements)
 }
 
 function shuffle(array) {
@@ -57,10 +37,8 @@ function shuffle(array) {
   while (counter > 0) {
     // Pick a random index
     let index = Math.floor(Math.random() * counter);
-
     // Decrease counter by 1
     counter--;
-
     // And swap the last element with it
     let temp = array[counter];
     array[counter] = array[index];
@@ -91,7 +69,6 @@ function createDivsForImgs(imgArray) {
 // TODO: Implement this function!
 function handleCardClick(event) {
  // let clickedColor = event.target.className
- console.log(event.target)
   let parentDiv = event.target.parentNode
   let clickedImg = parentDiv.dataset.img
   let ID = parentDiv.dataset.id
