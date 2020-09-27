@@ -1,31 +1,114 @@
+body {
+  background-color: #417381;
+  color: #d7f6ff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#container {
+  display: table;
+  margin: auto;
+  width: 900px;
+  padding: 10px;
+  background-color: #658E9A;
+  border-radius: 30px;
+}
+
 #game div {
-  border: 1px solid black;
-  width: 15%;
-  height: 200px;
+  width: 20%;
+  height: 220px;
   margin: 10px;
   display: inline-block;
 }
 img {
   width: 100%;
   height: inherit;
+  border: 1px solid #d7f6ff;
+}
+h1 {
+  font-size: 2.5em;
 }
 h4 {
   margin-block-start: 5px;
   margin-block-end: 5px;
+  font-size: 1.7em;
+}
+span, label {
+  font-size: 1.2em;
 }
 #game-control div {
+
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 5px 0px 10px 10px;
-  min-width: 20%;
-  max-width: 20%;
+  padding: 2.5%;
+  max-width: 40%;
+  border-radius: 10px;
+  background-color: #0E3E4C;
+}
+
+#game-control div:nth-child(4) {
+  border-radius: 10px;
+  background-color: #0E3E4C;
+  padding: 0px;
+  max-width: 40%;
+} 
+#game-control div:nth-child(5) {
+  border-radius: 10px;
+  background-color: #0E3E4C;
+  padding: 0px;
+  max-width: 40%;
+} 
+
+button {
+  padding: 20px;
+  width: 112%;
+  /* height: 50px; */
+  background-color: #2e5663;
+  color: #a2d4e2;
+  border-radius: 10px;
+  font-size: 1.5em;
+}
+button:hover {
+  border: 2px solid grey;
+  background-color: #487c8d;
+  box-shadow: 2px 2px 2px 1px rgba(46, 46, 46, 0.418);
 }
 #number-of-cards-container {
-  border: 1px solid black;
+  border: 2px solid black;
 }
+
+
 body > div {
   margin-left: 10px;
+  /* max-width: 1000px; */
 }
 #number-of-cards {
   width: 90%;
+}
+
+
+
+@media (max-width: 600px) {
+  img {
+    border: 1px solid #d7f6ff;
+  }
+  #container {
+    display: block;
+    margin: auto;
+    width: 400px;
+    padding: 10px;
+  }
+  #game-control div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 0px 10px 10px;
+    min-width: 80%;
+    padding: 20px;
+    /* background-color: #0E3E4C; */
+  }
+  #game div {
+    width: 40%;
+    height: 200px;
+    margin: 10px;
+    display: inline-block;
+  }
 }

@@ -20,9 +20,9 @@ let clickedDiv = {
 
 //color pool or image pool
 let imgPool = []
-let noImg = 23
+let noImg = 32
 for (let imgNo = 0; imgNo < noImg; imgNo++) {
-  imgPool.push(`img/img1 (${imgNo + 1}).jpg`)
+  imgPool.push(`img/img (${imgNo + 1}).jpeg`)
 
 }
 
@@ -91,6 +91,7 @@ function createDivsForImgs(imgArray) {
 // TODO: Implement this function!
 function handleCardClick(event) {
  // let clickedColor = event.target.className
+ console.log(event.target)
   let parentDiv = event.target.parentNode
   let clickedImg = parentDiv.dataset.img
   let ID = parentDiv.dataset.id
